@@ -31,6 +31,10 @@ const routers=[
 		      //   component:()=>import('/views/AboutSub/Aboutinfo.vue')
 		      // }
 		    ]
+	},
+	{
+		path : '/:pathMatch(.*)',
+		component: () => import('../components/404.vue')
 	}
 ]
 const router=createRouter({

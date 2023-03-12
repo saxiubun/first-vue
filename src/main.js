@@ -23,4 +23,14 @@ for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
   app.component(key, component)
 }
 
+router.beforeEach((to,from,next)=>{
+	sessionStorage.setItem('isLogin','true');
+	
+	let isLogin=sessionStorage.getItem('isLogin');
+	
+	sessionStorage.clear();
+	
+	console.log(isLogin);
+})
+
 app.mount('#app');
